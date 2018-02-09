@@ -3,6 +3,7 @@ package com.lyn.library.wifi;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
