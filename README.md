@@ -13,8 +13,7 @@
                 .subscribe(new Consumer<List<WifiEntity>>() {
                     @Override
                     public void accept(List<WifiEntity> wifiEntities) throws Exception {
-			//循环得到wifi列表
-                        //todo 得到wifi列表，下面是自己的业务逻辑         
+                        //todo 循环得到wifi列表，下面是自己的业务逻辑         
                     }
                 });
 
