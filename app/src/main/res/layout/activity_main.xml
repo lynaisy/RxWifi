@@ -9,12 +9,15 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="wifi开关" />
+            android:text="wifi开关"
+            android:textSize="20sp"/>
 
         <Switch
             android:id="@+id/st_wifi"
