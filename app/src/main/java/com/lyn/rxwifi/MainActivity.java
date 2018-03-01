@@ -26,8 +26,8 @@ import io.reactivex.functions.Consumer;
 
 /**
  * @author liuyn
- * 主流程已经通了
- * todo 连接一些细节没做，比如状态切换，密码输入错误处理等
+ *         主流程已经通了
+ *         todo 连接一些细节没做，比如状态切换，密码输入错误处理等
  */
 public class MainActivity extends AppCompatActivity {
     private Switch stWifi;
@@ -82,19 +82,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        wifiProcessInterface.stopScan();
+    }
+
+    @Override
     protected void onDestroy() {
         super.onDestroy();
-        wifiProcessInterface.stopScan();
     }
 
     /**
      * 创建连接wifi的dialog
      * todo 连接失败的逻辑
+     *
      * @param wifiName
      * @param wifiSecutityEnum
      */
     private void creatDialogConnectWifi(final String wifiName, final WifiSecutityEnum wifiSecutityEnum) {
-        final EditText et = new EditText(this);new AlertDialog.Builder(this)
+        final EditText et = new EditText(this);
+        new AlertDialog.Builder(this)
                 .setTitle(wifiName)
                 .setView(et)
                 .setPositiveButton("连接", new DialogInterface.OnClickListener() {
